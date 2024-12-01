@@ -115,19 +115,6 @@ python interface.py
 - Multi-language support
 - Intuitive GUI interface
 
-## Project Structure
-```
-.
-├── dataset/                # Gesture image datasets
-├── cnn_model_train.py     # CNN model training
-├── create_gestures.py     # Dataset creation tool
-├── display_gestures.py    # Visualization utility
-├── final.py              # Main recognition script
-├── interface.py          # GUI application
-├── load_images.py        # Image processing
-├── Rotate_images.py      # Data augmentation
-└── set_hand_histogram.py # Calibration tool
-```
 
 ## Development Stack
 
@@ -169,8 +156,7 @@ python interface.py
 
 ## Contact
 
-Project Link: [https://github.com/yourusername/listen-to-me](https://github.com/Mehdi-Soufiane/Listen-To-Me)
-
+Project Link: [https://github.com/Mehdi-Soufiane/listen-to-me]
 ---
 
 <p align="center">Made with ❤️ for accessibility and inclusion</p>
