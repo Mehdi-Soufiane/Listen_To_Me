@@ -157,16 +157,8 @@ python interface.py
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Team
-
-Project developed during MoroccoAI InnovAI Hackathon 2024 by:
-- [Team Member 1](https://github.com/member1)
-- [Team Member 2](https://github.com/member2)
-- [Team Member 3](https://github.com/member3)
 
 ## Acknowledgments
 
@@ -177,7 +169,7 @@ Project developed during MoroccoAI InnovAI Hackathon 2024 by:
 
 ## Contact
 
-Project Link: [https://github.com/yourusername/listen-to-me](https://github.com/yourusername/listen-to-me)
+Project Link: [https://github.com/yourusername/listen-to-me](https://github.com/Mehdi-Soufiane/Listen-To-Me)
 
 ---
 
