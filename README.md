@@ -59,7 +59,7 @@ python -m pip install -r Install_Packages_gpu.txt
 
 1. Clone the repository:
 ```bash
-git clone [(https://github.com/Mehdi-Soufiane/Listen_To_Me/)]
+git clone https://github.com/Mehdi-Soufiane/Listen_To_Me
 cd listen-to-me
 ```
 
