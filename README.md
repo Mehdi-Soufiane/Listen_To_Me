@@ -2,8 +2,8 @@
 
 > Fast communication, Easy life - Breaking barriers in deaf communication through AI
 
-[![Flutter Version](https://img.shields.io/badge/Flutter-3.0-blue.svg)](https://flutter.dev/)
 [![Python Version](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0+-orange.svg)](https://tensorflow.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ## About The Project
@@ -16,105 +16,88 @@ Listen To Me is an innovative sign language recognition system developed during 
 - Lack of seamless integration between deaf and hearing communities
 
 ### Our Solution
-Our application provides:
-- Real-time sign language recognition using computer vision
-- Voice-to-text conversion for accessibility
+Our system leverages computer vision and deep learning to provide:
+- Real-time sign language recognition (>95% accuracy)
+- Voice-to-text conversion
 - Text-to-speech functionality
-- Intuitive mobile interface
-- High accuracy gesture recognition (>95% accuracy)
+- Calculator mode through gesture recognition
+- Custom gesture dataset creation and training
 
 ## Technical Architecture
 
-### Frontend
-- Flutter for cross-platform mobile development
-- Material Design UI components
-- Real-time camera integration
-- Speech-to-text and text-to-speech modules
+### Core Components
+- **CNN Model**: Custom architecture for gesture recognition
+- **OpenCV Pipeline**: Real-time hand detection and segmentation
+- **PyQt6 Interface**: User-friendly GUI for interaction
+- **SQLite Database**: Efficient gesture data management
 
-### Backend
-- Python-based REST API using Flask
-- TensorFlow/Keras for deep learning models
-- OpenCV for image processing
-- SQLite database for gesture storage
-- PyQt6 for desktop interface
+### Model Architecture
+- Convolutional Neural Network with multiple conv layers
+- MaxPooling for feature extraction
+- Dense layers with dropout for robust classification
+- Input shape: 64x64 grayscale images
+- Real-time inference capabilities
 
-### Machine Learning Pipeline
-- CNN architecture for gesture recognition
-- Real-time hand detection and segmentation
-- Data augmentation for improved model robustness
-- Transfer learning for optimized performance
+## Quick Start
 
-## Getting Started
-
-### Prerequisites
+The application is designed to be simple to use. Just run:
 ```bash
-# Install Python packages
-python -m pip install -r Install_Packages.txt
-
-# For GPU support
-python -m pip install -r Install_Packages_gpu.txt
+python interface.py
 ```
+This launches the main interface where you can access all functionality.
 
-### Installation & Setup
+### Complete Setup
 
 1. Clone the repository:
 ```bash
 git clone https://github.com/Mehdi-Soufiane/Listen_To_Me
-cd listen-to-me
+cd Listen_To_Me
 ```
 
-2. Set up the hand histogram for gesture detection:
+2. Install dependencies:
 ```bash
-python set_hand_histogram.py
+python -m pip install -r Install_Packages.txt
+# For GPU acceleration:
+python -m pip install -r Install_Packages_gpu.txt
 ```
 
-3. Create your gesture dataset:
-```bash
-python create_gestures.py
-```
+3. Create your dataset:
+- Run `python set_hand_histogram.py` for hand calibration
+- Use `python create_gestures.py` to record your gestures
+- Train the model with `python cnn_model_train.py`
 
-4. Train the model:
-```bash
-python cnn_model_train.py
-```
+## Dataset Creation Guide
 
-5. Launch the application:
-```bash
-python interface.py
-```
+1. **Hand Calibration**:
+   - Run `set_hand_histogram.py`
+   - Place your hand in the green squares
+   - Press 'C' to capture
+   - Press 'S' to save calibration
 
-## Usage Guide
+2. **Recording Gestures**:
+   - Run `create_gestures.py`
+   - Enter gesture name when prompted
+   - Record variations of the gesture
+   - Repeat for all desired gestures
 
-### 1. Calibration
-- Run hand calibration first
-- Follow on-screen instructions
-- Place hand in green squares
-- Press 'C' to capture
-- Press 'S' to save
-
-### 2. Creating Gestures
-- Launch gesture creation tool
-- Enter gesture name
-- Record multiple variations
-- Save and train model
-
-### 3. Recognition
-- Start recognition mode
-- Choose between text or calculator mode
-- Use voice commands if needed
-- View real-time translations
+3. **Model Training**:
+   - After collecting all gestures
+   - System will offer to train the model
+   - Choose 'Yes' to start training
 
 ## Features
 
+### Core Functionality
 - Real-time sign language recognition
 - Voice-to-text conversion
 - Text-to-speech feedback
 - Calculator mode using gestures
-- Gesture visualization tools
-- Custom gesture training
-- Multi-language support
-- Intuitive GUI interface
 
+### Technical Features
+- Custom dataset creation
+- Real-time hand segmentation
+- Model retraining capability
+- Multi-modal interaction
 
 ## Development Stack
 
@@ -122,17 +105,13 @@ python interface.py
 - TensorFlow/Keras
 - OpenCV
 - PyQt6
-- Flutter/Dart
 - SQLite
-- Flask RESTful API
 
 ## Future Enhancements
 
-- Cloud deployment
-- API development for third-party integration
+- Cloud model deployment
 - Extended gesture vocabulary
-- Improved model accuracy
-- Mobile app optimization
+- Enhanced model architecture
 - Real-time feedback mechanism
 - Support for additional sign languages
 
@@ -144,9 +123,6 @@ python interface.py
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
-
 ## Acknowledgments
 
 - MoroccoAI for organizing the InnovAI Hackathon
@@ -156,7 +132,8 @@ python interface.py
 
 ## Contact
 
-Project Link: [https://github.com/Mehdi-Soufiane/listen-to-me]
+Project Link: https://github.com/Mehdi-Soufiane/Listen_To_Me
+
 ---
 
 <p align="center">Made with ❤️ for accessibility and inclusion</p>
