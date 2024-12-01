@@ -17,7 +17,7 @@ Listen To Me is an innovative sign language recognition system developed during 
 
 ### Our Solution
 Our system leverages computer vision and deep learning to provide:
-- Real-time sign language recognition (>95% accuracy)
+- Real-time sign language recognition 
 - Voice-to-text conversion
 - Text-to-speech functionality
 - Calculator mode through gesture recognition
